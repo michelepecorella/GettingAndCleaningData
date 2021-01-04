@@ -24,5 +24,5 @@ The tidytrain and tidytest are joint together and create the result file.
 Then the script select only the measuraments that have in the names the word "mean" and "std" and there is in this moment the creation of a new file called resmeanstd
 Then is necessary to trasform the resmeanstd in a long format with the function melt and this is necessary for create a file where is calculate the mean of each subject intersect with each activity intersect with each variables.
 
-At the end the file is saved in the computer
+At the end the file is saved in the computer only if it's just create a file with the same name in the same path
 
