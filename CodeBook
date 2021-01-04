@@ -1,0 +1,28 @@
+In this script are used three packages: dplyr (in particular select function), reshape2 (in particular melt and dcast functions) and data.table (for saving in the computer the tidydata with write.table function)
+So the first action made is to load these packages
+The the script create a folder named data, download the zip file and unzip that file only if this three actions aren't made yet.
+Then the following text file are loaded in R:
+subtrain: it's the subject_train.txt
+xtrain: it's the X_train.txt
+ytrain: it's the y_train.txt
+feat: it's the features.txt
+aclabel: it's the activity_labels.txt
+
+Then, it's gave the names to the columns of xtrain (that are the different measuraments of our exercise)
+After this it's merged the aclabel and ytrain in such a way that is replaced the number of the activity with the names of the activity
+Are merged the subtrain and the new ytrain and give to this new file (tidytrain) the coloumns names.
+Then are ad to tidytrain also the measuraments of xtrain.
+
+The same thing is made with the test files. This are the other text files loaded:
+subtest: it's the subject_test.txt
+xtest: it's the X_test.txt
+ytest: it's the y_test.txt
+It's create a file called tidytest where all the files inherent at the test are linked together
+
+The tidytrain and tidytest are joint together and create the result file.
+
+Then the script select only the measuraments that have in the names the word "mean" and "std" and there is in this moment the creation of a new file called resmeanstd
+Then is necessary to trasform the resmeanstd in a long format with the function melt and this is necessary for create a file where is calculate the mean of each subject intersect with each activity intersect with each variables.
+
+At the end the file is saved in the computer
+
